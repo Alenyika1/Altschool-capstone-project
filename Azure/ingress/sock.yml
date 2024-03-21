@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sock-shop
+  namespace: sock-shop
+  annotations:
+    cert-manager.io/cluster-issuer: production
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: sock-shop.alenyika.com.ng
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: front-end
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - sock-shop.alenyika.com.ng
+      secretName: production-cluster-issuer
