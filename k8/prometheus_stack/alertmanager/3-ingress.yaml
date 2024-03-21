@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: alertmanager.qurtana.com.ng
+    - host: alertmanager.alenyika.com.ng
       http:
         paths:
           - pathType: Prefix
@@ -20,5 +20,5 @@ spec:
                   number: 9093
   tls:
     - hosts:
-        - alertmanager.qurtana.com.ng
+        - alertmanager.alenyika.com.ng
       secretName: production-cluster-issuer

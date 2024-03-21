@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: grafana.qurtana.com.ng
+    - host: grafana.alenyika.com.ng
       http:
         paths:
           - pathType: Prefix
@@ -20,5 +20,5 @@ spec:
                   number: 3000
   tls:
     - hosts:
-        - grafana.qurtana.com.ng
+        - grafana.alenyika1.com.ng
       secretName: production-cluster-issuer
